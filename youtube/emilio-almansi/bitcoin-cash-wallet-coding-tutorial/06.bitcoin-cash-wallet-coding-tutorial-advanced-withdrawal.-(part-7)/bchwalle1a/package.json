@@ -1,0 +1,22 @@
+{
+  "name": "bchwalle1a",
+  "version": "1.0.0",
+  "description": "Bitcoin Cash Wallet: Single Address.",
+  "main": "index.js",
+  "author": "Emilio Almansi",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server .",
+    "build": "webpack --mode development --output-path . --output-filename bundle.js src/index.js",
+    "build:watch": "yarn build -w",
+    "dev": "concurrently --names 'build,start' 'yarn build:watch' 'yarn start'"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.0",
+    "bitcore-lib-cash": "0.19.0",
+    "whatwg-fetch": "3.0.0",
+    "http-server": "0.11.1",
+    "webpack": "4.28.3",
+    "webpack-cli": "3.2.0"
+  }
+}
